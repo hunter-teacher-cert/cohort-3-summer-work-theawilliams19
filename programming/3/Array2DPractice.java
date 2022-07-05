@@ -114,7 +114,7 @@ public class Array2DPractice
      row,col - ints specifying a location in board
      Returns:
      nothing
-     A location in a 2D array can be though of as having 6
+     A location in a 2D array can be thought of as having 8
      neighbors.  In the below 2D array, the neighbors of the element
      marked Q are the numbered elements.
      oooooo
@@ -208,7 +208,9 @@ public class Array2DPractice
   public static void main( String[] args )
   {
     char[][] b = buildBoard(5,10,'z');
-
+    printBoard(b);
+    setRow(b,2,'R');
+    System.out.println();
     printBoard(b);
 
     
