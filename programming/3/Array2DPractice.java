@@ -2,7 +2,8 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Array2DPractice by Team LucidThinkeren
+ * Array2DPractice by Team Group 15 
+ * Date: July 05,2022
  * Théa Williams
  * collaborators: Ashley Ufret, Steve Sabaugh
  */
@@ -60,7 +61,7 @@ public class Array2DPractice
   */
   public static void printBoard( char[][] board )
   {
-    for (int row = 0; row < board.length; row++)
+   for (int row = 0; row < board.length; row++)
     {
       for (int col = 0; col < board[row].length; col++)
       {
@@ -137,17 +138,73 @@ public class Array2DPractice
      Note: Make sure to correctly handle the cases when you try
      to explode an element on the edges.
   */
+    //explodeSquare diagrams - https://docs.google.com/drawings/d/1zR4EbwbV0aBSJhCEGuiV6pko4QgdlNwhE6UoYGlwrEE/edit?usp=sharing
+  //See Michael Randazzo's, Rachel Kaufman's, and Taylor Grant-Knight's GitHub accounts for alternate solutions.
+  
   public static void explodeSquare( char[][] board, int row, int col )
   {
     /* YOUR AWESOME CODE HERE */
-  }
+//cycles through row - 1 (row above target), row (target row) and row+1 (row below target)
+    for (int r = row-1; r<=row+1; r++)
+    {
+        if (r<0) //if r cycles above top row
+          continue;
+        if (r >= board.length) //bottom boundary
+          break;
+      for (int c = col-1; c<=col+1; c++)   
+      {
+        if (c <0) //left bound
+          continue;
+        if (c >= board[0].length) //right bound
+          continue;
 
+        if (!(r == row && c == col))//if not target row and target col then perform action below   
+          board[r][c] = 'X'; //board[2][1] = 'X'; board[2][2] = 'X'
+        //System.out.print(board[row][col] + " "); 
+      }
+    }
+      
+  }
+    
+    // int r = (row < 1) ? row : row - 1;
+    // int c = (col < 1) ? col : col - 1;
+    // int rowLim = (row + 2 > board.length - 1) ? board.length : row + 2;  
+    // int colLim = (col + 2 > board[0].length -1) ? board[0].length: col + 2;
+    
+    // for(r = 0; r < rowLim +2;r++)
+    // {
+    //   for(c = 0; c < colLim +2;c++)
+    //   {
+    //     if (r == row && c == col)
+    //     {
+    //       board[r][c] = board[r][c];
+    //     }
+    //     else {
+    //       board[r][c] = 'X';
+    //     }
+    //   }  
+    // }
   /**
      This method will search through the 2D array board and it will
      explode each square that contains the char c (using the above
      definition of exploding).
+
      Example:
+
      Given the array
+
+     qqzqq
+     qqqqq
+     qqqqq
+     qqqqq
+     qzqqq
+     qqqqq
+     qqqqz
+
+     ...
+     explodeAllchar(board,'z')
+     will change board to
+
      qXzXq
      qXXXq
      qqqqq
@@ -155,14 +212,13 @@ public class Array2DPractice
      XzXqq
      XXXXX
      qqqXz
-     explodeAllchar(board,'z') will change board to:
+
   */
+  //To see examples of solutions for the explodeAllChar method look at the following GitHub repos: Greg Sciame
   public static void explodeAllChar(char[][] board, char c)
   {
     /* YOUR AWESOME CODE HERE */
   }
-
-
   /**
      Parameters:
      board - a 2D array of char
@@ -207,9 +263,12 @@ public class Array2DPractice
   public static void main( String[] args )
   {
     char[][] b = buildBoard(5,10,'z');
-    printBoard(b);
-    setRow(b,2,'R');
+    //printBoard(b);
+    //setRow(b,2,'R');
     System.out.println();
+    printBoard(b);
+    System.out.println();
+    explodeSquare(b,3,2);
     printBoard(b);
 
     
