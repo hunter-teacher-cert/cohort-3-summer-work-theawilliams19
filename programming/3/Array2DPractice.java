@@ -60,14 +60,13 @@ public class Array2DPractice
   */
   public static void printBoard( char[][] board )
   {
-    for (int i = 0; i < board.length; i++)
+    for (int row = 0; row < board.length; row++)
     {
-      for (int j = 0; j < board[i].length; j++)
+      for (int col = 0; col < board[row].length; col++)
       {
-        System.out.print(board[i]
-                         [j]); 
-        
+        System.out.print(board[row][col] + " ");   
       }
+      System.out.println();
     }
   }
 
