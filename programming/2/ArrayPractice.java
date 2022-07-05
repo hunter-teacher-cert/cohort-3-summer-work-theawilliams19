@@ -1,7 +1,7 @@
 /**
  * ArrayPractice by Boss Coders
- * Patti Elfers-Wygand
- * collaborators: Kiana Herr, Théa Williams, Yeidy Levels
+ * Théa Williams
+ * collaborators: Kiana Herr, Yeidy Levels, Patti Elfers-Wygand
  */
 
 /**
@@ -98,7 +98,8 @@ public class ArrayPractice
   */
   public static void printArray( int[] data )
   {
-    for (int i=0; i<data.length; i++) {
+    for (int i = 0; i<data.length; i++) 
+    {
       System.out.print(data[i] + " ") ;
     }
     System.out.println("");
@@ -119,7 +120,7 @@ public class ArrayPractice
   */
   public static int firstOccurence( int[] data, int value )
   {
-    for (int i=0; i < data.length; i++)
+    for (int i = 0; i < data.length; i++)
     {
       if (data[i] == value) return i;
     }  
