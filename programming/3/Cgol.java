@@ -185,6 +185,9 @@ public class Cgol
     setCell(board, 0, 0, 'X');
     setCell(board, 0, 1, 'X');
     setCell(board, 1, 0, 'X');
+    setCell(board, 3, 4, 'X');
+    setCell(board, 4, 3, 'X');
+    setCell(board, 3, 3, 'X');
     // TASK:
     // Once your initial version is running,
     // try out different starting configurations of living cells...
@@ -192,10 +195,16 @@ public class Cgol
     System.out.println("Gen X:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-    board = generateNextBoard(board);
-    System.out.println("Gen X+1:");
-    printBoard(board);
-    System.out.println("--------------------------\n\n");
+
+    //repeat the gen multiple times
+    for (int i= 0; i<6; i++)
+    {
+      board = generateNextBoard(board);
+      System.out.println("Gen X+ "+ (i+1));
+      printBoard(board);
+      System.out.println("--------------------------\n\n");
+    }
+    
 
   }//end main()
 
