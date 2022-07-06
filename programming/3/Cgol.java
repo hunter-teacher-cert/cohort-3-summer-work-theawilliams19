@@ -70,7 +70,7 @@ public class Cgol
 
 
   //return number of living neigbours of board[r][c]
-  public static int countNeighbors( char[][] board, int row, int col )
+  public static int countNeighbours( char[][] board, int row, int col )
   {
     int count = 0;
     for (int r = row-1; r<=row+1; r++)
@@ -114,8 +114,8 @@ public class Cgol
     //the next gen character is set to a default of the previous gen's char
     char nextGen = board[r][c];
     
-    //check the number of neighbors
-    int n = countNeighbors (board, r, c);
+    //check the number of neighbours
+    int n = countNeighbours (board, r, c);
     
     //check to see if it's alive or dead
     boolean isAlive = false;
