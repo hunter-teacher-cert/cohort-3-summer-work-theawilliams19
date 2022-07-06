@@ -94,6 +94,13 @@ public class Array2DPractice
   public static void setRow( char[][] board, int row, char value )
   {
     /* YOUR AWESOME CODE HERE */
+    for(int i = row;i < row + 1;i++)
+    {
+      for(int j = 0;j < board[i].length;j++)
+      {
+        board[i][j] = value;
+      }
+    }
   }
 
 
@@ -104,7 +111,16 @@ public class Array2DPractice
   public static char[][] copyBoard( char[][] original )
   {
     /* YOUR AWESOME CODE HERE */
-    return original;
+    char tempArray [][] = new char [original.length][original[0].length];
+
+    for (int i = 0;i < original.length;i++)
+    {
+      for (int j = 0;j < original[0].length;j++)
+      {
+        tempArray[i][j] = original[i][j];
+      }
+    }
+    return tempArray;
   }
 
 
@@ -263,13 +279,24 @@ public class Array2DPractice
   public static void main( String[] args )
   {
     char[][] b = buildBoard(5,10,'z');
-    //printBoard(b);
+  
+    System.out.println();
+    System.out.println("printBoard");
+    printBoard(b);
+    System.out.println();
+    char [][] bCopy = copyBoard(b);
+    System.out.println("copy of b");
+    printBoard(bCopy);
     //setRow(b,2,'R');
     System.out.println();
-    printBoard(b);
+    System.out.println("setRow() with copy of b");
+    setRow(bCopy,1,'@');
+    printBoard(bCopy);
     System.out.println();
+    System.out.println("explodeSquare()");
     explodeSquare(b,3,2);
     printBoard(b);
+
 
     
     /*
