@@ -110,34 +110,70 @@ public class Cgol
   */
   public static char getNextGenCell( char[][] board,int r, int c )
   {
+
+    //the next gen character is set to a default of the previous gen's char
+    char nextGen = board[r][c];
+    
     //check the number of neighbors
     int n = countNeighbors (board, r, c);
-      if ('x')
     
     //check to see if it's alive or dead
-
-
+    boolean isAlive = false;
+    if (board[r][c] == 'X')
+    {
+      isAlive = true;
+    }
 
     //determine if the next gen cell is alive or dead
+    //if alive --> when do we kill it?
+    //* Every cell with <2 neighbours will die from isolation.
+    if (isAlive && n<2)
+    {
+      nextGen = '.';
+    }
     
-      // // Survivals:
-      // //    * A living cell with 2 or 3 living neighbours will survive for the next generation.
-      // //    Deaths:
-      // //    * Each cell with >3 neighbours will die from overpopulation.
-      // //    * Every cell with <2 neighbours will die from isolation.
-      // //    Births:
-      // //    * Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive in next generation.
-      // //    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
-      // */
+    //* Each cell with >3 neighbours will die from overpopulation.
+    if (isAlive && n>3)
+    {
+      nextGen = '.';
+    }
+
+    //if it's dead --> bring to life?
+    //* Each dead cell adjacent to exactly 3 living neighbours is a birth cell. It will come alive in next generation.
+    if (!isAlive && n==3)
+    {
+      nextGen = 'X';
+    }
+
+    //keep it otherwise (see how the nextGen was initialized with default value on line 115)
     
-    return 'é';
+    
+    return nextGen;
   }
 
 
   //generate and return a new board representing next generation
   public static char[][] generateNextBoard( char[][] board )
   {
-    return new char[1][1];
+
+    //declare and construct the next gen board (same size as the original board)
+    int row = board.length;
+    int col = board[0].length;
+    char[][] nextGenBoard = new char[row][col]; 
+    //char[][] nextGenBoard = board;
+
+    //for loop below traverses the board
+    for (int r = 0; r<board.length; r++)
+    {
+      for (int c = 0; c<board[0].length; c++)
+      {
+        //get the next gen's char --> put it in the new board
+        nextGenBoard[r][c] = getNextGenCell(board, r, c);
+      }
+    }
+
+    //return the next gen array
+    return nextGenBoard;
   }
 
 
