@@ -1,5 +1,5 @@
 /**
- * Rational class by Team 5
+ * Rational class by Team 5 (7/8/22)
  * Name (first, last): Thea Williams
  * Collaborators: Patti Elfers, Alana Robinson, Joshua Higgins
  */
