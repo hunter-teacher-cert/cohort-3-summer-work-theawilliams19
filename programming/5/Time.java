@@ -31,7 +31,7 @@ import java.util.*;
    - public boolean isEquals(Time other)
 
    
-   Advanced level (complete Basic + Intermediate + these two methods):
+   Advanced level (complete Basic + Intermediate + this method):
    - public int compareTo(Time other)
    
 */
@@ -162,12 +162,36 @@ public class Time {
        0 if the two instances represent the same time.
 
     */
-    public int compareTo(Time other){
+    public int compareTo(Time other)
+    {
 	// your code here)
 
-	return 0; // change this
-    }
+  	if(hours > other.hours)
+      {
+        return 1;
+      }else if(hours < other.hours)
+      {
+        return -1;
+      }else
+      {
+        if(minutes > other.minutes)
+        {
+          return 1;
+        }else if(minutes < other.minutes)
+        {
+          return -1;
+        }else
+      {
+        if(seconds > other.seconds)
+        {
+          return 1;
+        }else if(seconds < other.seconds)
+          {
+          return -1;
+          }
+      }
+         }return 0;
     
-
+    }//end method
     
 }//end class
