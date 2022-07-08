@@ -1,7 +1,7 @@
 /**
  * nth Fibonacci number generator by Team SumEmIfYaGotEm
- * First Last
- * collaborators: De Silva, Christopher, ELizabeth Rechtin, Ed Hawkins, Thea Williams
+ * Théa Williams
+ * collaborators: De Silva, Christopher, ELizabeth Rechtin, Ed Hawkins
  */
 public class Fib{
   public static int fib (int n){
