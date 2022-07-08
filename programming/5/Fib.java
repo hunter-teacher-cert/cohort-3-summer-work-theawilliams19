@@ -1,7 +1,7 @@
 /**
- * nth Fibonacci number generator by Team SumEmIfYaGotEm
+ * nth Fibonacci number generator by Team 14_7/7/22
  * Théa Williams
- * collaborators: De Silva, Christopher, ELizabeth Rechtin, Ed Hawkins
+ * collaborators: Christopher De Silva, Ed Hawkins, ELizabeth Rechtin 
  */
 public class Fib{
   public static int fib (int n){

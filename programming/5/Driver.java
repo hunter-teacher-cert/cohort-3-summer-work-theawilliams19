@@ -3,9 +3,9 @@ import java.util.*;
 
 
 /**
- * Driver class for Time class  by Team LucidThinkeren
+ * Driver class for Time class by Team 14_7/7/22
  * Elizabeth Rechtin
- * collaborators: Ed Hawkins, Thea Williams, Christopher De Silva
+ * Collaborators: Ed Hawkins, Thea Williams, Christopher De Silva
  */
 
 /**

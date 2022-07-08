@@ -1,2 +1,2 @@
 language = "bash"
-run = "cd programming/5; javac Time.java Driver.java; java Driver"
+run = "cd programming/5; javac Fence.java Driver.java; java Fence"

@@ -1,7 +1,7 @@
 /**
- * Recursion Practice with Strings by Team SweatEquity
- * Elizabeth Rechtin
- * collaborators: Ed Harris, Thea Williams, Christopher De Silva
+ * Recursion Practice with Strings by Team 14_7/7/22
+ * Théa Williams
+ * Collaborators: Christopher De Silva, Ed Hawkins, ELizabeth Rechtin 
  */
 
 public class Fence

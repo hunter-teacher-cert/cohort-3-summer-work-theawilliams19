@@ -3,11 +3,10 @@ import java.util.*;
 
 
 /**
- * Time class by Team LucidThinkeren
- * Elizabeth Rechtin
- * collaborators: Ed Hawkins, Thea Williams, Christopher DeSilva
-    I went through this line by line with Vasyl Ilnytskyy during office hours
-    also present were: Patti Elfers, Alana Robinson, Jenna Lin, Saranii, Muller, Stacy Goldstein, Christine Marra
+ * Time class by Team 14_7/7/22
+ * Théa Williams
+ * Collaborators: Christopher De Silva, Ed Hawkins, ELizabeth Rechtin 
+
  */
 
 /**
