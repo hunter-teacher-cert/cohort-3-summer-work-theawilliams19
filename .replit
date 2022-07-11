@@ -1,2 +1,2 @@
 language = "bash"
-run = "cd programming/5; javac Fence.java Driver.java; java Fence"
+run = "cd programming/6/sa; javac *java; java SuperArrayDriver"
