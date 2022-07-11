@@ -1,7 +1,7 @@
 /**
  * SuperArray by Team - Group 5 (7/8/22)
- * Patti Elfers
- * collaborators: , Théa Williams, Alana Robinson, Joshua Higgins
+ * Théa Williams
+ * Collaborators: Patti Elfers, Alana Robinson, Joshua Higgins
  */
 
 /**
@@ -43,15 +43,14 @@ public class SuperArray
     numberElements = 0;
    
   }
-
   //default constructor -- initializes capacity to 10
   public SuperArray()
   {
-    //init underlying/inner storage of capacity 10
-        /* YOUR SIMPLE+SMART CODE HERE */
+    //init (set the size) of underlying/inner storage (data) to a capacity 10
+      data = new int [10];
 
-    //init instance vars
-        /* YOUR SIMPLE+SMART CODE HERE */
+    //init instance vars initialize at 0
+      numberElements = 0;
   }
 
 
@@ -98,15 +97,14 @@ public class SuperArray
     // {
     //   return false:
     // }
-  }
+  }//end boolean isEmpty() method
 
 
   public int get(int index)
   {
-    
     //return item at index
     return data[index]; // returns the value at position index which means that is the location or position of index
-  }
+  }//end get method
 
 
   public String toString()
@@ -141,8 +139,9 @@ public class SuperArray
     // return value at position index, whatever is at that index what do you do?
     //shift items down to remove the item at index
     /* YOUR SIMPLE+SMART CODE HERE */
-    //this traverses through the array ++ and -- stops or caps when there is an element removed
-    for (int i = index; i < data.length - 1; i++)
+    //this traverses through the array ++ and -- stops or caps when there is an element 
+    //removed
+    for (int i = index; i < numberElements - 1; i++)
     {
     // this is shifting all the values one place
       data[i] = data[i+1];
@@ -154,32 +153,45 @@ public class SuperArray
 
   public void add(int index, int value)
   {
-    // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // class discussion recommeds create your grow() here 
+    //see if there's enough room
 
+    if (numberElements == data.length){
+      grow();
+    }
+      
     // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for(int i = numberElements; i > index; i--)
+    {
+      data[i] = data[i-1];
+    } 
 
     // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data[index] = value;
 
     // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
-  }
+    numberElements++;
+    
+  }//add method ends
 
 
   private void grow()
   {
-    // create a new array with extra space
+    // class discussion that grow() is private becuase there is no need for anyone outside to access your grow method
+    //create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // A: By 3.
+    int[] temp = new int[data.length+3];
 
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for(int i = 0; i < data.length; i++)
+    {
+      temp[i] = data[i];//this temp is a new array (container) to hold new data
+    }
 
     // point data to the new array
+    data = temp;
     // Q: How does this look when illustrated using encapsulation diagram?
-    /* YOUR SIMPLE+SMART CODE HERE */
   }//end grow()
 
 }//end class
