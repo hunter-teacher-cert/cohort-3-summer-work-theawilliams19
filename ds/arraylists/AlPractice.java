@@ -33,7 +33,8 @@ public class AlPractice{
   - A new ArrayList of Integers with each value being a random
     number between 0 and maxval (not including maxval).
   */
-  public static ArrayList<Integer> buildRandomList(int size, int maxval){
+  public static ArrayList<Integer> buildRandomList(int size, int maxval)
+  {
     
     ArrayList<Integer> randList = new ArrayList<Integer>(); // where the random numbers go
     Random random = new Random();//object from Random class that will randomly generate numbers to fill the array.
@@ -44,7 +45,7 @@ public class AlPractice{
     }
     
     return randList;//placeholder to compile.
-  }
+  }//end of buildRandomList method
 
   /**
   Parameters:
@@ -79,9 +80,12 @@ public class AlPractice{
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2)
   {
     // store the values at index1 & index2
+    int val1 = dataList.get(index1);//creates temp variable to store element from array index
+    int val2 = dataList.get(index2);//creates temp variable to store element from array index
 
     // set the arrayList at index1 to the stored value for index2 above and vice versa
-
+    dataList.set(index1, val2);//this will put the element we temporarily stored in val2 into the index 1 in the array.
+    dataList.set(index2, val1);//this will put the element we temporarily stored in val1 into the index 2 in the array.
   }
 
   /**
@@ -136,8 +140,6 @@ public class AlPractice{
   }
 
 
-
-
 public static void main(String[] args) {
 
     ArrayList<Integer> al;
@@ -148,8 +150,8 @@ public static void main(String[] args) {
     System.out.println("The sum of the above is: " + sumOfList(al));
 
     //Uncomment these to test swapElements
-    //swapElements(al,2,6); // NOTE: had to include al
-    //System.out.println(al);
+    swapElements(al,2,6); // These literal parameters are passing into the swapElements method.
+    System.out.println(al);
 
     // Uncomment these to test removeValue
     //al.add(5);
