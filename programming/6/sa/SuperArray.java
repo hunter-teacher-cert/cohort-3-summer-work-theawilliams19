@@ -111,7 +111,7 @@ public class SuperArray
   {
     //return stringified version of this Object and you want to print every object. This method traverses through our array and we created a loop
     String myString = "";
-    for (int i = 0; i < data.length; i++) {
+    for (int i = 0; i < numberElements; i++) {
      myString += data [i] + " ";
     }
     return myString; // return
@@ -156,7 +156,8 @@ public class SuperArray
     // class discussion recommeds create your grow() here 
     //see if there's enough room
 
-    if (numberElements == data.length){
+    if (numberElements == data.length)
+    {
       grow();
     }
       

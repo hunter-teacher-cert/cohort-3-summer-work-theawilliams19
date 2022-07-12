@@ -100,6 +100,7 @@ public class AlPractice{
     // down from there so that if we remove something we don't try to stop after the end of the
     // arrayList
     
+    
   }
 
 
@@ -144,25 +145,29 @@ public static void main(String[] args) {
 
     ArrayList<Integer> al;
 
-    // Uncomment these to test buildRandomList
+    public static void main(String[] args) {
+
+    ArrayList<Integer> al;
+
+    //Uncomment these to test buildRandomList
     al = buildRandomList(10,100);
     System.out.println(al);
-    System.out.println("The sum of the above is: " + sumOfList(al));
 
     //Uncomment these to test swapElements
-    swapElements(al,2,6); // These literal parameters are passing into the swapElements method.
+    swapElements(al,2,6); // NOTE: had to include al
     System.out.println(al);
 
-    // Uncomment these to test removeValue
-    //al.add(5);
-    //al.add(10);
-    //al.add(5);
-    //al.add(13);
-    //al.set(2,5);
-    //al.set(3,5);
-    //System.out.println(al); //NOTE:  this was listed as a, not al
-    //removeValue(al,5);
-    //System.out.println(al); //NOTE:  this was listed as a, not al
+    // // Uncomment these to test removeValue
+    // al.add(5);
+    // al.add(10);
+    // al.add(5);
+    // al.add(13);
+    // al.set(2,5);
+    // al.set(3,5);
+    // System.out.println(al); // needed al, not a
+    // removeValue(al,5);
+    // System.out.println(al); // needed al, not a
 
+  }
   }
 }//ends class
