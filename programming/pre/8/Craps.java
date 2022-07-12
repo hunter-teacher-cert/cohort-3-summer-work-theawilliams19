@@ -8,6 +8,8 @@
 //Otherwise:
 //the value the player rolled is now called the Point the player continues to shoot (roll) until the player either rolls the same Point again at which point the player wins or the player rolls a 7 at which point the player loses.
 
+//*************TO RUN THIS PROGRAM************* After compiling, type java Craps (and a number right after - to signify the number of rounds) TYPE: java Craps 2
+
 import java.util.Random;
 
 public class Craps {
