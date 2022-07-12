@@ -36,7 +36,7 @@ public class AlPractice{
   public static ArrayList<Integer> buildRandomList(int size, int maxval){
     
     ArrayList<Integer> randList = new ArrayList<Integer>(); // where the random numbers go
-    Random random = new Random();
+    Random random = new Random();//object from Random class that will randomly generate numbers to fill the array.
     for (int i = 0; i < size; i++) // making it up to size as we go though
     {
       // adds an item of random value from 0 -> maxval
@@ -76,7 +76,11 @@ public class AlPractice{
     the value  that was in dataList[index2] is now in dataList[index1].
   - No other values should be modified.
   */
-  public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
+  public static void swapElements(ArrayList<Integer> dataList, int index1,int index2)
+  {
+    // store the values at index1 & index2
+
+    // set the arrayList at index1 to the stored value for index2 above and vice versa
 
   }
 
@@ -88,7 +92,8 @@ public class AlPractice{
   - The dataList is modified such that all occurances of valueToRemove are removed.
   */
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove){
-
+    // this function will change the size of the array. So we need to start at the end and move
+    // down from there so that if we remove something we don't try to stop after the 
   }
 
 
