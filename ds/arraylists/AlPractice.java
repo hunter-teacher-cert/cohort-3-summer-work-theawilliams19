@@ -37,10 +37,10 @@ public class AlPractice{
     
     ArrayList<Integer> randList = new ArrayList<Integer>(); // where the random numbers go
     Random random = new Random();//object from Random class that will randomly generate numbers to fill the array.
-    for (int i = 0; i < size; i++) // making it up to size as we go though
+    for (int i = 0; i < size; i++) // making it up to size as we go though. 
     {
       // adds an item of random value from 0 -> maxval
-      randList.add(random.nextInt(maxval)); 
+      randList.add(random.nextInt(maxval)); //The random number is first generated and then is is added.
     }
     
     return randList;//placeholder to compile.
@@ -93,7 +93,9 @@ public class AlPractice{
   */
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove){
     // this function will change the size of the array. So we need to start at the end and move
-    // down from there so that if we remove something we don't try to stop after the 
+    // down from there so that if we remove something we don't try to stop after the end of the
+    // arrayList
+    
   }
 
 
@@ -108,8 +110,14 @@ public class AlPractice{
   Postconditions:
   - The parameter ArrayLists should not be modified.
   */
-  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-    return null;//placeholder to compile.
+  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
+  {
+    // make a new arrayList to keep values
+    
+    // assumes they are the same size so can use either size
+      // add the value of ListA at i and the Value of ListB at i to the new arrayList
+    
+    return null; // return the new arrayList
   }
 
   /** zipLists
@@ -122,7 +130,8 @@ public class AlPractice{
   Postconditions:
   - The parameter ArrayLists should not be modified.
   */
-  public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
+  public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
+  {
     return null;//placeholder to compile.
   }
 
