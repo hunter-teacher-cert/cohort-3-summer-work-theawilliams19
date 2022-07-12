@@ -1,5 +1,10 @@
 language = "bash"
-run = "cd programming/6/sa; javac *java; java SuperArrayDriver"
+run = "cd programming/pre/8; javac *java; java Craps 8"
+
+#"cd ds/arraylists; javac *java; java AlPractice"
 
 #language = "bash"
-#run = "pre08; javac *java; java Craps 8"
+#run = ""cd programming/pre/8; javac *java; java Craps 8""
+
+
+#"cd programming/6/sa; javac *java; java SuperArrayDriver"
