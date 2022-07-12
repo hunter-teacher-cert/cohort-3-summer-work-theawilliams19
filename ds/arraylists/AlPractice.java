@@ -52,9 +52,17 @@ public class AlPractice{
   Returns:
   - The sum of all of the elements of the ArrayList.
   */
-  public static int sumOfList(ArrayList<Integer> dataList){
-    return 0;//placeholder to compile.
-  }
+  public static int sumOfList(ArrayList<Integer> dataList)
+  {
+    int sum = 0;  // variable we created to store the sum
+    for(int i = 0; i < dataList.size(); i++)
+    {
+     // action if condition is met in for loop - adds each item at i to the sum, after this loop returns to last part which increments (moves to the next index in array.)
+     sum += dataList.get(i);
+    }//end of for loop
+    
+    return sum; // returns the sum of the elements in the array.
+  }//ends sumOfList method
 
   /**
   Parameters:
@@ -120,9 +128,10 @@ public static void main(String[] args) {
 
     ArrayList<Integer> al;
 
-    //Uncomment these to test buildRandomList
-    //al = buildRandomList(10,100);
-    //System.out.println(al);
+    // Uncomment these to test buildRandomList
+    al = buildRandomList(10,100);
+    System.out.println(al);
+    System.out.println("The sum of the above is: " + sumOfList(al));
 
     //Uncomment these to test swapElements
     //swapElements(al,2,6); // NOTE: had to include al
