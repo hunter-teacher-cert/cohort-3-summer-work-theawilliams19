@@ -1,5 +1,7 @@
 language = "bash"
-run = "cd programming/pre/8; javac *java; java Craps 8"
+run = "cd ds/Pointers; javac Driver.java Node.java; java Driver"
+
+#"cd programming/pre/8; javac *java; java Craps 8"
 
 #"cd ds/arraylists; javac *java; java AlPractice"
 

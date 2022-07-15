@@ -1,20 +1,27 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ALPractice.java
+Owner:  Théa W 
+Collaborators: William L,	Maxwell Y  (Room 3)
+**/
+
 /** Methods to write
+
 Basic level:
 ------------
 public static ArrayList<Integer> buildRandomList(int size, int maxval)
 public static int sumOfList(ArrayList<Integer> dataList)
-int myArray[] <--- <> serves same general idea
 
 Intermediate level:
 -------------------
 public static void swapElements(ArrayList<Integer> dataList, int indexA,int indexB)
-public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
+
 
 Challenge level:
 -------------------
+public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
 public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
 public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
 */
@@ -100,9 +107,16 @@ public class AlPractice{
     // down from there so that if we remove something we don't try to stop after the end of the
     // arrayList
     
-    
+    // 5, 5, 1, 6, 7, 5  and we removed 5's we would end up with 1, 6, 7 so we have to start at the end
+    // because the length will change
+    for (int i = dataList.size() - 1; i >= 0; i--)
+    {
+      if (dataList.get(i) == valueToRemove)
+      {
+        dataList.remove(i);
+      }
+    }
   }
-
 
   /**
   Parameters:
@@ -118,11 +132,18 @@ public class AlPractice{
   public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
   {
     // make a new arrayList to keep values
+    ArrayList<Integer> retList = new ArrayList<Integer>();
+
     
     // assumes they are the same size so can use either size
+    for (int i = 0; i < ListA.size(); i++)
+    {
       // add the value of ListA at i and the Value of ListB at i to the new arrayList
+      // adds an item to relList which is the total of ListA at i and ListB at i
+      retList.add(ListA.get(i) + ListB.get(i));
+    }
     
-    return null; // return the new arrayList
+    return retList; // return the new arrayList
   }
 
   /** zipLists
