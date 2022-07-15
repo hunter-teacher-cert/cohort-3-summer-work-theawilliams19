@@ -19,7 +19,6 @@ toString()
 
 
 Intermediate (at least add, size + one of the other two)
-*** must complete at least value method and one other method on the intermediate level.***
 ------------
 size()
 add(int index,String value)
@@ -88,15 +87,9 @@ public class LinkedList{
 
     // set up a returnString
     
-    // traverse the List WHILE temp is not null // can do this with a FOR loop if we do size first
-
-        // add the temp toString to the returnString
-      
-        // set the temp to the temp's next
-
-    // add a null so it dones't point to space?
+    // traverse the List while temp is not null
     
-    return "";  // change to return the returnString
+    return "";  // change to return the re
   }
 
   /**
