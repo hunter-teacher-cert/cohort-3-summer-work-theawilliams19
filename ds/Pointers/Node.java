@@ -1,3 +1,12 @@
+/**
+Node.java
+Owner: Théa W
+Collaborators: Maxwell Y, Will L, Jerusha T
+Group/Breakout Room 3
+Date: 7/15/22
+**/
+
+
 public class Node{
   private String data;
   private Node next;
