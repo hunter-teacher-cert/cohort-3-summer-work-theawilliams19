@@ -23,5 +23,18 @@ public class Driver{
     System.out.println(l.get(1));
     System.out.println(l.get(2));
     System.out.println(l.get(3));
+
+    // testing size
+    System.out.println(l.size());
+
+    // teseting toString();
+    System.out.println(l);
+
+    // add overload test
+    l.add(1, "A.5");
+    System.out.println(l);
+
+    // of indexOf
+    System.out.println(l.indexOf("B")); 
   }
 }
