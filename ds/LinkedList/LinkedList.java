@@ -6,7 +6,7 @@ LinkedList.java
 Owner: Théa W
 Collaborators: Maxwell Y, Will L, Jerusha T
 Group 3
-Dates: 7/15/22 & 7/18/22
+Dates: 7/15/22, 7/18/22, 7/19/22
 **/
 
 /**
@@ -30,7 +30,7 @@ toArray()DONE
 
 Challenge
 --------
-remove(int index);
+remove(int index); DONE
 */
 
 public class LinkedList{
