@@ -1,4 +1,4 @@
-Team 1 (elementary): Alana, Théa, Vanessa and Yeidy 
+Team 1 (elementary): Alana, Ashley, Théa, Vanessa and Yeidy 
 
 PreReq: CS use computational thinking - at this point we've already introduced pattern recognition. 
 

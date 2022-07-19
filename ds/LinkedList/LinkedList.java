@@ -25,7 +25,7 @@ Intermediate (at least add, size + one of the other two)
 size() DONE
 add(int index,String value) DONE
 indexOf(String value); DONE
-toArray()
+toArray()DONE
 
 
 Challenge
@@ -223,8 +223,25 @@ public class LinkedList{
   the array.
 
   */
-  public String[] toArray(){
-    return null;
+  public String[] toArray()
+  {
+  
+    // make a walker to go over the linked list set it to the head
+    Node walkerTemp = head;
+    
+    // make a String array of size size()
+    String[] strArray = new String[size()];
+  
+    
+    // for each item in the linked list until size()
+    for (int i = 0; i < size(); i++)
+    {
+      strArray[i] = walkerTemp.getData();// set the array at index = to the linked list at index
+      
+      // move the walker on
+      walkerTemp = walkerTemp.getNext();
+    } 
+    return strArray; // return the array
   }
 
 
@@ -237,9 +254,36 @@ public class LinkedList{
   Given the list:
   "a"->"b"->"c"->"d"->"e"
 
-  remove(2) results in:
+  remove(2) results in (this removes a node at "index 2"):
   "a"->"b"->"d"->"e"
   */
   public void remove(int index){
+    
+    
+    if(index == 0) // if special cases first item in the LL
+    {
+      head = head.getNext();
+    }
+    else // else we would need know the value of the previous and the next node past the index
+    {
+      // we need to store the node at i & the node at i -1 to temporary variables
+      Node currentNode = head.getNext();  // index of 1
+      Node previousNode = head; // index of 0
+      for (int i = 1; i<size(); i++)
+      {
+        if(i == index)
+        {
+          previousNode.setNext(currentNode.getNext()); 
+        }
+        else // assume we are not at the correct index so move though the LinkList
+        {
+          previousNode = previousNode.getNext();  // i -1  -> i (previousNode.getNext is the same as = currentNode)
+          currentNode = currentNode.getNext();  // i -> i + 1
+        }
+      }
+    }
+
+    
+    
   }
 }
