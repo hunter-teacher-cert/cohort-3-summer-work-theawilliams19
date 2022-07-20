@@ -160,12 +160,34 @@ public class SortSearch{
     public int binarySearch(int value){
 
 	    // create assign variables  representing the high, low and middle indices 
-	    // while we're not done:
+      
+      int low = 0;
+      int high = data.size()-1;
+      int middle = (low + high)/2;
+      
+   	  // while we're not done:
+      while(true)
+      {
 	    //   if the item is at data.get(middle), return middle
-	    //   otherwise, update high, low, and middle
-
-	    return 0;
-	    
+        if (data.get(middle) == value)
+        {
+          return middle; // the value defined in the main is found 
+        }
+	      //   otherwise, update high, low, and middle
+        else if (high <= low)
+        {
+          return -1; // not found in the arraylist
+        }
+        else if(value < data.get(middle))
+        {
+          high = middle-1; // sets the "high" index to the one below the old "middle" index.This adjustment happens if necessary.
+        }
+        else
+        {
+          low = middle +1; // sets the "low" index to the one above the old "middle" index.This adjustment happens if necessary.
+        }
+        middle = (low + high)/2;
+      }	    
     }
     
     /**
