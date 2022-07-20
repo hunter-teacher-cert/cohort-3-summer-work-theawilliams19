@@ -15,18 +15,19 @@ public class SortSearchDriver {
 
 	int i;
 	i = ss.findSmallestIndex(0);
-  System.out.println("\nPrint results when started at 0:\nss[smallestIndex] = value : data");
+  System.out.println("\nPrint results when started at index 0 in the array:\nss[smallestIndex] = value : data");
 	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
 
-	i = ss.findSmallestIndex(3);
-  System.out.println("\nPrint results when started at 3:\nss[smallestIndex] = value : data");
+	i = ss.findSmallestIndex(10);
+  System.out.println("\nPrint results when started at index 3 in the array:\nss[smallestIndex] = value : data");
 	 System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
 	// Uncomment these to test part 3
-
-	// System.out.println(ss);
-	// ss.sort();
-	// System.out.println(ss);
+  System.out.println("\nPrint array:");
+	System.out.println(ss);
+  System.out.println("\nPrint sorted array:");
+	ss.sort();
+	System.out.println(ss);
 	
 
 

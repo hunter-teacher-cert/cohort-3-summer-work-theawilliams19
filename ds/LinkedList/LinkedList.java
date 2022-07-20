@@ -226,10 +226,10 @@ public class LinkedList{
   public String[] toArray()
   {
   
-    // make a walker to go over the linked list set it to the head
+    // make a walker to go over the linked list. Set it to the head
     Node walkerTemp = head;
     
-    // make a String array of size size()
+    // make a String array of size "size()""
     String[] strArray = new String[size()];
   
     
@@ -241,7 +241,7 @@ public class LinkedList{
       // move the walker on
       walkerTemp = walkerTemp.getNext();
     } 
-    return strArray; // return the array
+    return strArray; // returns the array
   }
 
 
