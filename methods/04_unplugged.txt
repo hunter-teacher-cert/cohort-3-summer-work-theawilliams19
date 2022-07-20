@@ -24,7 +24,6 @@ Node, Data, Next, Store, Memory, row/column (younger grades) or x,y corridinates
 - Computers compute (what - information/data)
 - input/output
 - information can be stored and organized (vertical stacks, horziontal lists) 
---> Precursor activity from CodeSpark: Wild West Pets (Concept - Stacks and Queues)
 - how to trace a row/column with finger to get to a point/box.
 
 
@@ -71,3 +70,4 @@ name of a person who knows a lot
 etc
 
 *See 04_unplugged.draw file in this folder
+*Potential online/digital follow up lesson activity for elementary school students --> CodeSpark: Wild West Pets (Concept - Stacks and Queues)

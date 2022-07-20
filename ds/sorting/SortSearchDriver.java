@@ -29,9 +29,10 @@ public class SortSearchDriver {
 	ss.sort();
 	System.out.println(ss);
 	
-
-
-	      
+ System.out.println("\n-------------LinearSearch Test -------------");
+  System.out.println(ss.linearSearch(0));
+  System.out.println(ss.linearSearch(10));
+  System.out.println(ss.linearSearch(21));
 
     }
 }

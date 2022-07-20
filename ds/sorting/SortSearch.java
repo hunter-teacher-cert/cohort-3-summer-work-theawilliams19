@@ -139,30 +139,30 @@ public class SortSearch{
     */
     public int linearSearch(int value)
     {
-      for(int i = 0; i < data.size(); i++)
+      for(int i = 0; i < data.size(); i++) //traverses the array list from beginning to end
       {
-        if (data.get(i) == value)
+        if (data.get(i) == value) // hanging if, only happens IF there is no ELSE
         {
-          return i;
+          return i; //returns the first occurence of "value"
         }
         
       } // ends the for loop
+
+      // The area down here works like an ELSE
 	
-	
-	    return 0; // replace this return
+	    return -1; // returns -1 if "value" is not found in the arraylist.
     }
     
     /**
        Implement a binary search as specified by the comments
-       
        This algorithm only works on sorted ArrayLists.
     */
     public int binarySearch(int value){
 
-	// create assign variables  representing the high, low and middle indices 
-	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
+	    // create assign variables  representing the high, low and middle indices 
+	    // while we're not done:
+	    //   if the item is at data.get(middle), return middle
+	    //   otherwise, update high, low, and middle
 
 	    return 0;
 	    
