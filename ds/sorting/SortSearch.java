@@ -1,6 +1,14 @@
 import java.io.*;
 import java.util.*;
 
+/**
+SortSearch.java
+Owner: Théa W.
+Collaborators: Adam P., Ben E., Kiana H. 
+Group 5
+Dates: 7/18/22, 7/19/22, 7/20/22
+**/
+
 /*
 Sort Project:
 
@@ -16,6 +24,7 @@ Part 2: (BASIC)
 Part 3: (INTERMEDIATE)
   1. Complete the sort method - read comments for description - DONE
   2. Uncomment the lines in SortSearchDriver to test. - DONE
+
 Search Project:
   1. Complete the linear search (BASIC)
   2. Complete the binary search (Intermediate)
@@ -128,7 +137,16 @@ public class SortSearch{
        until either the element is found or you've looked at all the elements.
        This algorithm works on any ArrayList.
     */
-    public int linearSearch(int value){
+    public int linearSearch(int value)
+    {
+      for(int i = 0; i < data.size(); i++)
+      {
+        if (data.get(i) == value)
+        {
+          return i;
+        }
+        
+      } // ends the for loop
 	
 	
 	    return 0; // replace this return
