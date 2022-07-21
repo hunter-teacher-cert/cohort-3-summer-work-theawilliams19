@@ -1,6 +1,7 @@
 language = "bash"
 run = "cd ds/sorting; javac *java; java SortSearchDriver"
 
+#run = "cd ds/sorting; javac *java; java SortSearchReferenceDriver"
 
 #"cd ds/LinkedList; javac *java; java Driver"
 #"cd ds/Pointers; javac Driver.java Node.java; java Driver"

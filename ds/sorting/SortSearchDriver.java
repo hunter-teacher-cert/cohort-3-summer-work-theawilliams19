@@ -28,7 +28,14 @@ public class SortSearchDriver {
   System.out.println("\n----------------Print array----------------");
 	System.out.println(ss);
   System.out.println("\n-------------Print sorted array-------------");
-	ss.sort();
+  
+  long start,elapsed; // "long" is like a long int. int go to 16 digits and "long"'s go to 32 digits.
+
+	start = System.currentTimeMillis(); //We are setting/initializing the "start" variable to the current time. This method is build into the System class library.
+	ss.sort();//calling the sort method
+
+	elapsed = System.currentTimeMillis() - start;//setting/initializing the "elapsed" variable to the current time - the time now, which is equal to the elapsed time.
+	System.out.println("Size: 15, Time: " + elapsed);//prints out the size of the array and the time elapsed
 	System.out.println(ss);
 	
   System.out.println("\n-------------LinearSearch Method Test -------------");
