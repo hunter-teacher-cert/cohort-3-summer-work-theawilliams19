@@ -26,8 +26,8 @@ Part 3: (INTERMEDIATE)
   2. Uncomment the lines in SortSearchDriver to test. - DONE
 
 Search Project:
-  1. Complete the linear search (BASIC)
-  2. Complete the binary search (Intermediate)
+  1. Complete the linear search (BASIC) - DONE
+  2. Complete the binary search (Intermediate) - DONE
   3. Complete the recursive version of binary search (Advanced)
 */
 
@@ -157,7 +157,8 @@ public class SortSearch{
        Implement a binary search as specified by the comments
        This algorithm only works on sorted ArrayLists.
     */
-    public int binarySearch(int value){
+    public int binarySearch(int value)
+    {
 
 	    // create assign variables  representing the high, low and middle indices 
       
@@ -173,20 +174,20 @@ public class SortSearch{
         {
           return middle; // the value defined in the main is found 
         }
-	      //   otherwise, update high, low, and middle
-        else if (high <= low)
+	      
+        else if (high <= low)//   edge case, if the value is not found, this will break out of the loop. Otherwise, it will go to the else cases below (update high, low, and middle).
         {
           return -1; // not found in the arraylist
         }
         else if(value < data.get(middle))
         {
-          high = middle-1; // sets the "high" index to the one below the old "middle" index.This adjustment happens if necessary.
+          high = middle - 1; // sets the "high" index to the one below the old "middle" index.This adjustment happens if necessary.
         }
         else
         {
-          low = middle +1; // sets the "low" index to the one above the old "middle" index.This adjustment happens if necessary.
+          low = middle + 1; // sets the "low" index to the one above the old "middle" index.This adjustment happens if necessary.
         }
-        middle = (low + high)/2;
+        middle = (low + high) / 2;
       }	    
     }
     
@@ -196,12 +197,34 @@ public class SortSearch{
        This algorithm only works on sorted ArrayLists.
     */
 
-    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
+    public int binarySearchRecursive(int value, int lowIndex, int highIndex)
+  {
+		  // if high and low have not met yet
+      if(lowIndex <= highIndex)
+      
+      {
+      // set a mid to the middle of highIndex and lowIndex
+      int middle = (lowIndex + highIndex) / 2;
+      
+      // return the middle if we found the value
+      if (value == data.get(middle))
+      {
+        return middle;
+      }
 
-	// refer to class discussion
-	
-	    return 0;
-	    
+      // if the mid is less than the value search high
+      if (value > data.get(middle))
+      {
+        return binarySearchRecursive(value, middle +1, highIndex);
+      }
+      // if the mid is more than the value search low
+      if (value < data.get(middle))
+      {
+        return binarySearchRecursive(value, lowIndex, middle -1);
+      }
+    }
+      
+	  return -1; // return the base case that it is not found
     }
     
 	

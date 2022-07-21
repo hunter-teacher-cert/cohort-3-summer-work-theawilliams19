@@ -16,16 +16,18 @@ public class SortSearchDriver {
 	int i;
 	i = ss.findSmallestIndex(0);
   System.out.println("\nPrint results when started at index 0 in the array:\nss[smallestIndex] = value : data");
+  System.out.println("--------------------------------");
 	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
 
 	i = ss.findSmallestIndex(10);
   System.out.println("\nPrint results when started at index 3 in the array:\nss[smallestIndex] = value : data");
+   System.out.println("--------------------------------");
 	 System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
 	// Uncomment these to test part 3
-  System.out.println("\nPrint array:");
+  System.out.println("\n----------------Print array----------------");
 	System.out.println(ss);
-  System.out.println("\nPrint sorted array:");
+  System.out.println("\n-------------Print sorted array-------------");
 	ss.sort();
 	System.out.println(ss);
 	
@@ -38,6 +40,16 @@ public class SortSearchDriver {
   System.out.println(ss.binarySearch(0));
   System.out.println(ss.binarySearch(10));
   System.out.println(ss.binarySearch(21));
+  
+ int size = 14;
+  System.out.println("--------------Binary Search Recursive Method Test--------------");
+  System.out.println(ss);
+  System.out.print("Index of 0: ");
+  System.out.println(ss.binarySearchRecursive(0, 0, size));
+  System.out.print("Index of 10: ");
+  System.out.println(ss.binarySearchRecursive(10, 0, size));
+  System.out.print("Index of 21: ");
+	System.out.println(ss.binarySearchRecursive(21, 0, size));
 
     }
 }
