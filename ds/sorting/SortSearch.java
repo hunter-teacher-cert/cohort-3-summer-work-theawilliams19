@@ -63,6 +63,17 @@ public class SortSearch{
 	
     }
 
+      public SortSearch(int size, int foo)//overloaded constructor that takes in an int "size". foo int does nothing. We added this just to be able to use this constructor to create larger sorter arrays.
+    {
+    	data = new ArrayList<Integer>();//initializes the instance variable "data"
+    	
+    	for (int i=0; i<size; i++)//size is provided by the user through through the varialbe "size"
+      {
+    	  data.add(i);//this makes it so that the data at i will equal value
+    	}
+	
+    }
+
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
 	    return this.data.get(index);
