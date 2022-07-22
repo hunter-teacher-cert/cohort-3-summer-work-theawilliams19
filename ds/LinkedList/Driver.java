@@ -13,7 +13,9 @@ public class Driver{
     LinkedList l = new LinkedList();
     
     System.out.println(l);
+    System.out.println(l.size()); // added null size test
     // testing add
+    
     System.out.println("Add test ----------------------------------------------");
     l.add("D");
     l.add("C");
@@ -65,6 +67,10 @@ public class Driver{
     l.remove(1);
     System.out.println(l);
 
+    // added end of LL test
+    System.out.println(l.size());
+    l.add(4,"E"); 
+    System.out.println(l);
     
   }
 }
